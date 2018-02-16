@@ -9,11 +9,20 @@ import java.util.Map;
 // v0.0.03 - introduce collections
 public class Fruit   {
 	
-	private String sName;
+	private String fruitName="not set";
 	private List<String> fruitNameList;
 	private Map<String, String> fruitNameMap;
+	public String getsDesc() {
+		return sDesc;
+	}
+
+	public void setsDesc(String sDesc) {
+		this.sDesc = sDesc;
+	}
+
+	private String sDesc="%s";
 	
-	public Fruit() {setFruitName("");} // no argument constructor now explicitly defined
+	public Fruit() {} // no argument constructor now explicitly defined
 	
 	public Fruit(String name) {
 //		super();
@@ -23,8 +32,8 @@ public class Fruit   {
 	public String talkABoutYourself() {
 		String speech;
 		
-		if (sName != null && sName.trim().length() > 0) {
-			speech = "Hi, I am a fruit called " + sName + ". I come from plants or trees with seeds";
+		if (fruitName != null && fruitName.trim().length() > 0) {
+			speech = String.format(sDesc, fruitName);
 		} else {
 			speech =  "Hi, I am a fruit. I come from plants or trees with seeds";
 		}
@@ -54,12 +63,28 @@ public class Fruit   {
 		return speech;
 	}
 
+	public String getsName() {
+		return fruitName;
+	}
+
+	public void setsName(String sName) {
+		this.fruitName = sName;
+	}
+
+	public String getSDesc() {
+		return sDesc;
+	}
+
+	public void setSDesc(String sDesc) {
+		this.sDesc = sDesc;
+	}
+
 	public String getFruitName() {
-		return sName;
+		return fruitName;
 	}
 
 	public void setFruitName(String name) {
-		this.sName = name;
+		this.fruitName = name;
 	}
 
 	public List<String> getFruitNameList() {

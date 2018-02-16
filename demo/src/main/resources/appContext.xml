@@ -8,7 +8,19 @@
 		
 	<context:property-placeholder location="classpath:application.properties"/>	
     <bean id="extVegie" class="food.Vegetable">
-    	<property name="name" value="${def-veg}"></property>
+    	<property name="SDesc" value="${def-veg}"></property>
+    </bean>
+    <bean id="extFruit" class="food.Fruit">
+    	<property name="SDesc" value="${def-fruit}"></property>
+    </bean>
+    <bean id="extDairy" class="food.Dairy">
+    	<property name="sDesc" value="${def-dairy}"></property>
+    </bean>
+    <bean id="extGrain" class="food.Grain">
+    	<property name="sDesc" value="${def-grain}"></property>
+    </bean>
+    <bean id="extMeat" class="food.Meat">
+    	<property name="SDesc" value="${def-meat}"></property>
     </bean>
 
     <bean id="fruit" class="food.Fruit" />
@@ -17,18 +29,18 @@
     <bean id="meat" class="food.Meat" />
     <bean id="grain" class="food.Grain" />
     <bean id="meal" class="food.Meal">
-        <property name="fruit" ref="fruit"></property>
+        <property name="fruit" ref="apple"></property>
         <property name="dairy" ref="dairy"></property>
         <property name="grain" ref="grain"></property>
         <property name="meat" ref="meat"></property>
-        <property name="vegie" ref="vegetable"></property>
+        <property name="vegie" ref="lettuce"></property>
     </bean>
     <bean id="mealCons" class="food.Meal">
-        <constructor-arg index="0" ref="fruit"></constructor-arg>
-        <constructor-arg name="dairy" ref="dairy"></constructor-arg>
-        <constructor-arg name="grain" ref="grain"></constructor-arg>
-        <constructor-arg name="meat" ref="meat"></constructor-arg>
-        <constructor-arg name="vegie" ref="vegetable"></constructor-arg>
+        <constructor-arg index="0" ref="extFruit"></constructor-arg>
+        <constructor-arg name="dairy" ref="extDairy"></constructor-arg>
+        <constructor-arg name="grain" ref="extGrain"></constructor-arg>
+        <constructor-arg name="meat" ref="extMeat"></constructor-arg>
+        <constructor-arg name="vegie" ref="extVegie"></constructor-arg>
     </bean>
     
     <bean id="apple" class="food.Fruit" >
@@ -62,6 +74,13 @@
     </bean>
     <bean id="vegWithPSpace"  class="food.Vegetable" p:name="Squash"></bean>
     
-    
+   <bean id="mealOuterBean" class="food.Meal">
+       <property name="fruit">
+         <bean id="appleInnerBean" class="food.Fruit">
+           <property name="fruitName" value="Apple" />
+           <property name="sDesc" value="Hi, I'm %s which is a fruit. Typically I am round and red." />
+         </bean>
+       </property>
+   </bean>  
 
 </beans>

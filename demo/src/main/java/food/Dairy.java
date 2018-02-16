@@ -4,10 +4,11 @@ package food;
 public class Dairy {
 	
 	private String sName="not set";
+	private String sDesc="%s";
 	
 	public String talkAboutYourself() {
 		if (sName != null && sName.trim().length() > 0) {
-			return "Hi, I'm " + sName + " which is a dairy product.";
+			return String.format(sDesc, sName);
 		}
 		return "Hi, I'm an unspecified dairy product.";
 	}
@@ -18,5 +19,21 @@ public class Dairy {
 
 	public void setSName(String name) {
 		this.sName = name;
+	}
+
+	public String getsName() {
+		return sName;
+	}
+
+	public void setsName(String sName) {
+		this.sName = sName;
+	}
+
+	public String getSDesc() {
+		return sDesc;
+	}
+
+	public void setSDesc(String sDesc) {
+		this.sDesc = sDesc;
 	}
 }

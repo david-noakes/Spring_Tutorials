@@ -33,11 +33,11 @@ public class Meal {
 	public String whatsInThisMeal() {
 		String mealContains = "This meal contains: ";
 		
-		if (fruit != null) {mealContains += "some fruit: " + fruit.getFruitName() + "; ";}
-		if (dairy != null) {mealContains += "some dairy: " + dairy.getSName() + "; ";}
-		if (grain != null) {mealContains += "some grain: " + grain.getSName() + "; ";}
-		if (meat != null) {mealContains += "some meat: " + meat.getSName() + "; ";}
-		if (vegie != null) {mealContains += "some vegies: " + vegie.getName() + "; ";}
+		if (fruit != null) {mealContains += "some fruit: " + fruit.talkABoutYourself() + "\n";}
+		if (dairy != null) {mealContains += "some dairy: " + dairy.talkAboutYourself() + "\n";}
+		if (grain != null) {mealContains += "some grain: " + grain.talkAboutYourself() + "\n";}
+		if (meat != null) {mealContains += "some meat: " + meat.talkAboutYourself() + "\n";}
+		if (vegie != null) {mealContains += "some vegies: " + vegie.talkAboutYourself() + "\n";}
 		
 		return mealContains;
 	}

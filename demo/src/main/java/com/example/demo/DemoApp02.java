@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import food.Meal;
+import food.Vegetable;
 
 /*
  * v001 - basic app with setter injection
@@ -21,6 +22,9 @@ public class DemoApp02 {
 		System.out.println("Spring meal: " + springMeal.whatsInThisMeal());
 		Meal springMealCons = appContext.getBean("mealCons", Meal.class);
 		System.out.println("Spring meal cons: " + springMealCons.whatsInThisMeal());
+		
+		Vegetable extVegie = appContext.getBean("extVegie", Vegetable.class);
+		System.out.println(extVegie.talkAboutYourself());
 
 		((ClassPathXmlApplicationContext) appContext).close();
 	}

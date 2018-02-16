@@ -3,7 +3,7 @@ package food;
 //v0.0.02 - introduce a property and set it via appContext.xml
 public class Grain {
 	
-	private String sName;
+	private String sName="not set";
 	
 	public String talkAboutYourself() {
 		if (sName != null && sName.trim().length() > 0) {

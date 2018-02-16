@@ -1,4 +1,4 @@
-package com.example.demo;
+package food;
 
 import java.util.List;
 import java.util.Map;
@@ -9,7 +9,7 @@ import java.util.Map;
 // v0.0.03 - introduce collections
 public class Fruit   {
 	
-	private String fruitName;
+	private String sName;
 	private List<String> fruitNameList;
 	private Map<String, String> fruitNameMap;
 	
@@ -23,8 +23,8 @@ public class Fruit   {
 	public String talkABoutYourself() {
 		String speech;
 		
-		if (fruitName != null && fruitName.trim().length() > 0) {
-			speech = "Hi, I am a fruit called " + fruitName + ". I come from plants or trees with seeds";
+		if (sName != null && sName.trim().length() > 0) {
+			speech = "Hi, I am a fruit called " + sName + ". I come from plants or trees with seeds";
 		} else {
 			speech =  "Hi, I am a fruit. I come from plants or trees with seeds";
 		}
@@ -55,11 +55,11 @@ public class Fruit   {
 	}
 
 	public String getFruitName() {
-		return fruitName;
+		return sName;
 	}
 
 	public void setFruitName(String name) {
-		this.fruitName = name;
+		this.sName = name;
 	}
 
 	public List<String> getFruitNameList() {

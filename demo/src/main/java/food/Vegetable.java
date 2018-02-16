@@ -1,4 +1,4 @@
-package com.example.demo;
+package food;
 
 //v0.0.02 - introduce a property and set it via appContext.xml
 public class Vegetable {

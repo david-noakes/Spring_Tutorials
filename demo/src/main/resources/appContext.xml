@@ -5,5 +5,12 @@
 
     <bean id="fruit" class="com.example.demo.Fruit" />
     <bean id="vegetable" class="com.example.demo.Vegetable" />
+    <bean id="apple" class="com.example.demo.Fruit" >
+	    <constructor-arg index="0" value="Apple">
+	    </constructor-arg>
+    </bean>
+    <bean id="lettuce" class="com.example.demo.Vegetable">
+        <property name="name" value="Lettuce"></property>
+    </bean>
 
 </beans>

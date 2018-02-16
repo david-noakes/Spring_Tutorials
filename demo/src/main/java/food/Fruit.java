@@ -63,6 +63,13 @@ public class Fruit   {
 		return speech;
 	}
 
+	public void initMethod() {
+		System.out.println("The fruit bean is ready to go - name: " + fruitName + " desc: " + sDesc);
+	}
+	public void destroyMethod() {
+		System.out.println("Fruit Bean about to be destroyed");
+	}
+	
 	public String getsName() {
 		return fruitName;
 	}

@@ -10,7 +10,9 @@
     <bean id="extVegie" class="food.Vegetable">
     	<property name="SDesc" value="${def-veg}"></property>
     </bean>
-    <bean id="extFruit" class="food.Fruit">
+    <bean id="extFruit" class="food.Fruit"
+        init-method="initMethod"
+        destroy-method="destroyMethod">
     	<property name="SDesc" value="${def-fruit}"></property>
     </bean>
     <bean id="extDairy" class="food.Dairy">

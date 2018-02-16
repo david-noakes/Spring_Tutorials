@@ -22,10 +22,17 @@ public class DemoApplication {
 		Vegetable myVegetable = (Vegetable) appContext.getBean("vegetable");
 		Fruit myApple = appContext.getBean("apple", Fruit.class);
 		Vegetable myLettuce = appContext.getBean("lettuce", Vegetable.class);
+		Fruit myOrange = appContext.getBean("orange", Fruit.class);
+		Fruit myFruitSalad = appContext.getBean("fruitSalad", Fruit.class);
+		
 		
 		System.out.println(myFruit.talkABoutYourself());
 		System.out.println(myVegetable.talkAboutYourself());
 		System.out.println(myApple.talkABoutYourself());
 		System.out.println(myLettuce.talkAboutYourself());
+		System.out.println(myOrange.talkABoutYourself());
+		System.out.println(myFruitSalad.talkABoutYourself());
+		
+		
 	}
 }

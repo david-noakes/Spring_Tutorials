@@ -1,31 +1,81 @@
 package com.example.demo;
 
+import java.util.List;
+import java.util.Map;
+
+
+
 // v0.0.02 - introduce a non default constructor. We also need to create the default constructor, since we lose it otherwise
+// v0.0.03 - introduce collections
 public class Fruit   {
 	
-	private String name;
+	private String fruitName;
+	private List<String> fruitNameList;
+	private Map<String, String> fruitNameMap;
 	
-	public Fruit() {setName("");} // no argument constructor now explicitly defined
+	public Fruit() {setFruitName("");} // no argument constructor now explicitly defined
 	
 	public Fruit(String name) {
 //		super();
-		setName(name);
+		setFruitName(name);
 	}
 
 	public String talkABoutYourself() {
-		if (name != null && name.trim().length() > 0) {
-			return "Hi, I am a fruit called " + name + ". I come from plants or trees with seeds";
+		String speech;
+		
+		if (fruitName != null && fruitName.trim().length() > 0) {
+			speech = "Hi, I am a fruit called " + fruitName + ". I come from plants or trees with seeds";
 		} else {
-			return "Hi, I am a fruit. I come from plants or trees with seeds";
+			speech =  "Hi, I am a fruit. I come from plants or trees with seeds";
 		}
+		
+		if (fruitNameList != null && fruitNameList.size() > 0) {
+			String comma = "";
+			speech += "\nList: ";
+//			fruitNameList.forEach(item->{  // java 8 does not allow this code to compile
+//				speech += comma + " " + item;
+//				comma = ",";
+//			});
+			for (int i = 0; i < fruitNameList.size(); i++) {
+				speech += comma + " " + fruitNameList.get(i);
+				comma = ",";
+			}
+		}
+		
+		if (fruitNameMap != null && fruitNameMap.size()>0) {
+			String comma = "";
+			speech += "\nMap: ";
+			for (Map.Entry<String, String> item : fruitNameMap.entrySet()) {
+				speech += comma + item.getKey() + " ==> " + item.getValue();
+				comma =  " :: ";
+			}
+		}
+		
+		return speech;
 	}
 
-	public String getName() {
-		return name;
+	public String getFruitName() {
+		return fruitName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setFruitName(String name) {
+		this.fruitName = name;
+	}
+
+	public List<String> getFruitNameList() {
+		return fruitNameList;
+	}
+
+	public void setFruitNameList(List<String> fruitNameList) {
+		this.fruitNameList = fruitNameList;
+	}
+
+	public Map<String, String> getFruitNameMap() {
+		return fruitNameMap;
+	}
+
+	public void setFruitNameMap(Map<String, String> fruitNameMap) {
+		this.fruitNameMap = fruitNameMap;
 	}
 
 }

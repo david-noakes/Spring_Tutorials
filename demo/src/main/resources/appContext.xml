@@ -12,5 +12,28 @@
     <bean id="lettuce" class="com.example.demo.Vegetable">
         <property name="name" value="Lettuce"></property>
     </bean>
+    <bean id="orange" class="com.example.demo.Fruit" >
+        <property name="fruitName" value="Orange"></property>
+    </bean>
+    <bean id="fruitSalad"  class="com.example.demo.Fruit">
+        <property name="fruitName" value="Fruit Salad"></property>
+    	<property name="fruitNameList">
+     	   <list>
+	    	   <value>apple</value>
+	    	   <value>orange</value>
+	    	   <value>banana</value>
+	    	   <value>pawpaw</value>
+    	   </list>
+    	</property>
+    	<property name="fruitNameMap">
+    	   <map>
+    	   <entry key="apple" value="red" />
+    	   <entry key="orange" value="orange"/>
+    	   <entry key="banana" value="yellow"/>
+    	   <entry key="pawpaw" value="orange/red"/>
+    	   </map>
+    	</property>
+    </bean>
+    
 
 </beans>

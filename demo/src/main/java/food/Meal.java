@@ -1,5 +1,9 @@
 package food;
 
+/*
+ * v001 - basic bean
+ * v002 - introduce non default constructor 
+ */
 public class Meal {
 
 	private Fruit fruit;
@@ -8,6 +12,24 @@ public class Meal {
 	private Meat meat;
 	private Vegetable vegie;
 	
+	
+	// constructors
+	public Meal() {
+		super();
+	}
+	
+	public Meal(Fruit fruit, Dairy dairy, Grain grain, Meat meat, Vegetable vegie) {
+		super();
+		this.fruit = fruit;
+		this.dairy = dairy;
+		this.grain = grain;
+		this.meat = meat;
+		this.vegie = vegie;
+	}
+
+
+
+	// methods
 	public String whatsInThisMeal() {
 		String mealContains = "This meal contains: ";
 		

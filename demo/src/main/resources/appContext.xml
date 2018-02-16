@@ -16,6 +16,13 @@
         <property name="meat" ref="meat"></property>
         <property name="vegie" ref="vegetable"></property>
     </bean>
+    <bean id="mealCons" class="food.Meal">
+        <constructor-arg index="0" ref="fruit"></constructor-arg>
+        <constructor-arg name="dairy" ref="dairy"></constructor-arg>
+        <constructor-arg name="grain" ref="grain"></constructor-arg>
+        <constructor-arg name="meat" ref="meat"></constructor-arg>
+        <constructor-arg name="vegie" ref="vegetable"></constructor-arg>
+    </bean>
     
     <bean id="apple" class="food.Fruit" >
 	    <constructor-arg index="0" value="Apple">

@@ -24,7 +24,7 @@ public class DemoApplication {
 		Vegetable myLettuce = appContext.getBean("lettuce", Vegetable.class);
 		Fruit myOrange = appContext.getBean("orange", Fruit.class);
 		Fruit myFruitSalad = appContext.getBean("fruitSalad", Fruit.class);
-		
+		Vegetable mySquash = appContext.getBean("vegWithPSpace", Vegetable.class);
 		
 		System.out.println(myFruit.talkABoutYourself());
 		System.out.println(myVegetable.talkAboutYourself());
@@ -32,6 +32,7 @@ public class DemoApplication {
 		System.out.println(myLettuce.talkAboutYourself());
 		System.out.println(myOrange.talkABoutYourself());
 		System.out.println(myFruitSalad.talkABoutYourself());
+		System.out.println(mySquash.talkAboutYourself());
 		
 		
 	}

@@ -8,7 +8,7 @@
 		
 	<context:property-placeholder location="classpath:application.properties"/>	
     <bean id="fruit" class="com.example.demo.food.Fruit" />
-    <bean id="vegetable" class="com.example.demo.food.Vegetable" />
+    <bean id="vegie" class="com.example.demo.food.Vegetable" />
     <bean id="dairy" class="com.example.demo.food.Dairy" />
     <bean id="meat" class="com.example.demo.food.Meat" />
     <bean id="grain" class="com.example.demo.food.Grain" />
@@ -18,10 +18,11 @@
         <property name="dairy" ref="dairy"></property>
         <property name="grain" ref="grain"></property>
         <property name="meat" ref="meat"></property>
-        <property name="vegie" ref="vegetable"></property>
+        <property name="vegie" ref="vegie"></property>
     </bean>
     
-    <bean id="mealAutowired" class="com.example.demo.food.Meal" autowire="byType"/>
+    <bean id="mealAutowiredByType" class="com.example.demo.food.Meal" autowire="byType"/>
+    <bean id="mealAutowiredByName" class="com.example.demo.food.Meal" autowire="byName"/>
     
 
 </beans>

@@ -34,6 +34,9 @@ public class AutowireDemoApplication {
 		Meal mealAutowiredByConstructor = appContext.getBean("mealAutowiredByConstructor", Meal.class);
 		System.out.println("Autowired Constructor meal: " + mealAutowiredByConstructor.whatsInThisMeal());
 
+		Meal mealAutowiredByDefault = appContext.getBean("mealAutowiredByDefault", Meal.class);
+		System.out.println("Autowired Default meal: " + mealAutowiredByDefault.whatsInThisMeal());
+
 		((ClassPathXmlApplicationContext) appContext).close();
 		
 	}

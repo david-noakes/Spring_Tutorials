@@ -24,6 +24,7 @@
     <bean id="mealAutowiredByType" class="com.example.demo.food.Meal" autowire="byType"/>
     <bean id="mealAutowiredByName" class="com.example.demo.food.Meal" autowire="byName"/>
     <bean id="mealAutowiredByConstructor" class="com.example.demo.food.Meal" autowire="constructor"/>
+    <bean id="mealAutowiredByDefault" class="com.example.demo.food.Meal" autowire="default"/>
     
 
 </beans>

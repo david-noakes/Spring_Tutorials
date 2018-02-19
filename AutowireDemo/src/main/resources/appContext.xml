@@ -20,5 +20,8 @@
         <property name="meat" ref="meat"></property>
         <property name="vegie" ref="vegetable"></property>
     </bean>
+    
+    <bean id="mealAutowired" class="com.example.demo.food.Meal" autowire="byType"/>
+    
 
 </beans>

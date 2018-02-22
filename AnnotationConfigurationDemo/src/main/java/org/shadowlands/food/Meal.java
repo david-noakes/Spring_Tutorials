@@ -6,16 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
  * v001 - basic bean
  * v002 - introduce autowired on properties or setters
  * v003 - autowired the constructor instead 
+ * v004 - default behaviour for when autowire can't be sorted
  */
 public class Meal {
 
-	//@Autowired
+	@Autowired(required=false)
 	private Fruit fruit;
-	//@Autowired
+	@Autowired
 	private Dairy dairy;
-	//@Autowired
+	@Autowired
 	private Grain grain;
-	//@Autowired
+	@Autowired
 	private Meat meat;
 	//@Autowired on setter instead
 	private Vegetable vegie;
@@ -79,7 +80,7 @@ public class Meal {
 	public Vegetable getVegie() {
 		return vegie;
 	}
-	//@Autowired
+	@Autowired
 	public void setVegie(Vegetable vegie) {
 		this.vegie = vegie;
 	}

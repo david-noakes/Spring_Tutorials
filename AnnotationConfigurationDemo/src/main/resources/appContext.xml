@@ -10,15 +10,15 @@
 	<!-- v003 remove fruit bean -->
 	<context:annotation-config />
 	
-<!--     <bean id="fruit" class="org.shadowlands.food.Fruit"> -->
-<!--         <property name="description" value="a fruit, with the description set from the appContext"></property> -->
-<!--     </bean> -->
+    <bean id="fruit" class="org.shadowlands.food.Fruit">
+        <property name="description" value="a fruit, with the description set from the appContext"></property>
+    </bean>
     <bean id="vegie" class="org.shadowlands.food.Vegetable" />
     <bean id="dairy" class="org.shadowlands.food.Dairy" />
     <bean id="meat" class="org.shadowlands.food.Meat" />
     <bean id="grain" class="org.shadowlands.food.Grain" />
     
-<!--     <bean id="anotherFruit"  class="org.shadowlands.food.Fruit"></bean> -->
+    <bean id="anotherFruit"  class="org.shadowlands.food.Fruit"></bean>
     
     <bean id="mealByAnnotation" class="org.shadowlands.food.Meal" />
     

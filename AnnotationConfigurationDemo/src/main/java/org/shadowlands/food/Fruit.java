@@ -3,20 +3,31 @@ package org.shadowlands.food;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
 
 
 // v0.0.01 - basic class
-public class Fruit   {
+// v002 - add in a description property
+// v003 add it the value on the setter
+public class Fruit extends foodBase  {
 	
-	public Fruit() {} // no argument constructor now explicitly defined
+	public Fruit() { setDescription(" fruit"); } // no argument constructor now explicitly defined
 	
 	public String talkABoutYourself() {
 		String speech;
 		
-		speech =  "Hi, I am a fruit. I come from plants or trees with seeds";
+		speech =  "Hi, I am " + getDescription();
 		
 		return speech;
 	}
 
+	// this doesn't appear to be required. IT WORKS without this
+	// but when "anotherBean" is instantiated, it uses this setter
+	@Autowired
+	public void setDescription(@Value("wow, set in the setter ")String description) {
+		super.setDescription(description);
+	}
 
 }

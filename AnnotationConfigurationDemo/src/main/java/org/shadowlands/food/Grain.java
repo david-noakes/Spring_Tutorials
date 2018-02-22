@@ -1,13 +1,12 @@
 package org.shadowlands.food;
 
 //v0.0.01 - basic class
-public class Grain {
+public class Grain extends foodBase {
 	
-	public Grain()  {} // no argument constructor now explicitly defined
-	
+	public Grain()  { setDescription(" grain");} // no argument constructor now explicitly defined
 	public String talkAboutYourself() {
 		
-		String speech = "Hi, I'm an unspecified grain product.";
+		String speech = super.talkAboutYourself();
 		return speech;
 	}
 

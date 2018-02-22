@@ -6,14 +6,18 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<!-- <context:property-placeholder location="classpath:application.properties"/>  -->
-		
+	<!-- v002 annotate fruit -->	
 	<context:annotation-config />
 	
-    <bean id="fruit" class="org.shadowlands.food.Fruit" />
+    <bean id="fruit" class="org.shadowlands.food.Fruit">
+        <property name="description" value="a fruit, with the description set from the appContext"></property>
+    </bean>
     <bean id="vegie" class="org.shadowlands.food.Vegetable" />
     <bean id="dairy" class="org.shadowlands.food.Dairy" />
     <bean id="meat" class="org.shadowlands.food.Meat" />
     <bean id="grain" class="org.shadowlands.food.Grain" />
+    
+    <bean id="anotherFruit"  class="org.shadowlands.food.Fruit"></bean>
     
     <bean id="mealByAnnotation" class="org.shadowlands.food.Meal" />
     

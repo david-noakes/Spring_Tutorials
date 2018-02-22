@@ -2,13 +2,13 @@ package org.shadowlands.food;
 
 //v0.0.01 - basic class
 
-public class Vegetable {
+public class Vegetable extends foodBase{
 	
-	public Vegetable()  {} // no argument constructor now explicitly defined
+	public Vegetable()  { setDescription(" vegetable"); } // no argument constructor now explicitly defined
 	
 	public String talkAboutYourself() {
 		
-		String speech = "Hi, I'm a vegetable. I am a plant that is eaten as food.";
+		String speech = super.talkAboutYourself();
 
 		return speech; 
 	}

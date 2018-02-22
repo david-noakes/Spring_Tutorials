@@ -4,19 +4,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 /*
  * v001 - basic bean
- * v002 - introduce non default constructor 
+ * v002 - introduce autowired on properties or setters
+ * v003 - autowired the constructor instead 
  */
 public class Meal {
 
-	@Autowired
+	//@Autowired
 	private Fruit fruit;
-	@Autowired
+	//@Autowired
 	private Dairy dairy;
-	@Autowired
+	//@Autowired
 	private Grain grain;
-	@Autowired
+	//@Autowired
 	private Meat meat;
-	//..@Autowired on setter instead
+	//@Autowired on setter instead
 	private Vegetable vegie;
 	
 	
@@ -24,7 +25,7 @@ public class Meal {
 	public Meal() {
 		super();
 	}
-	
+	@Autowired
 	public Meal(Fruit fruit, Dairy dairy, Grain grain, Meat meat, Vegetable vegie) {
 		super();
 		this.fruit = fruit;
@@ -78,7 +79,7 @@ public class Meal {
 	public Vegetable getVegie() {
 		return vegie;
 	}
-	@Autowired
+	//@Autowired
 	public void setVegie(Vegetable vegie) {
 		this.vegie = vegie;
 	}

@@ -22,5 +22,19 @@
     
     <bean id="mealByAnnotation" class="org.shadowlands.food.Meal" />
     
+    <bean id="smallTyre" class="org.shadowlands.car.SmallTyre"></bean>
+    <bean id="bigTyre" class="org.shadowlands.car.BigTyre"></bean>
+    <bean id="sixCyl" class="org.shadowlands.car.SixCylinderEngine"></bean>
+    <bean id="fourCyl" class="org.shadowlands.car.FourCylinderEngine"></bean>
+    
+    <bean id="familyCar" class="org.shadowlands.car.FamilyCar">
+        <property name="frontLeft" ref="smallTyre"/>
+        <property name="frontRight" ref="smallTyre"/>
+        <property name="rearLeft" ref="bigTyre"/>
+        <property name="rearRight" ref="bigTyre"/>
+        <property name="engineType" ref="fourCyl"/>
+    </bean>
+    
+    <bean id="altFamilyCar" class="org.shadowlands.car.FamilyCar"/>
 
 </beans>

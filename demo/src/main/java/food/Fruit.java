@@ -3,6 +3,9 @@ package food;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 
 
 // v0.0.02 - introduce a non default constructor. We also need to create the default constructor, since we lose it otherwise
@@ -25,7 +28,6 @@ public class Fruit   {
 	public Fruit() {} // no argument constructor now explicitly defined
 	
 	public Fruit(String name) {
-//		super();
 		setFruitName(name);
 	}
 
@@ -63,11 +65,13 @@ public class Fruit   {
 		return speech;
 	}
 
+	@PostConstruct
 	public void initMethod() {
 		System.out.println("The fruit bean is ready to go - name: " + fruitName + " desc: " + sDesc);
 	}
+	@PreDestroy
 	public void destroyMethod() {
-		System.out.println("Fruit Bean about to be destroyed");
+		System.out.println("Fruit Bean about to be destroyed - name: " + fruitName + " desc: " + sDesc);
 	}
 	
 	public String getsName() {

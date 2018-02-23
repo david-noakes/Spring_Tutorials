@@ -1,24 +1,29 @@
 package org.shadowlands.car;
 
+import javax.annotation.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 public class FamilyCar {
 	// note - Autowire here is ambiguous smallTyre and bigTyre
-	@Autowired 
-	@Qualifier(value="sTyre")
+	//@Autowired
+	@Resource(name="smallTyre")
+	//@Qualifier(value="sTyre")
 	private Tyre frontLeft;
 	@Autowired
 	@Qualifier(value="sTyre")
 	private Tyre frontRight;
-	@Autowired
-	@Qualifier(value="bTyre")
+//	@Autowired
+//	@Qualifier(value="bigTyre")
+	@Resource(name="bigTyre")
 	private Tyre rearLeft;
 	@Autowired
-	@Qualifier(value="bTyre")
+	@Qualifier(value="bigTyre")
 	private Tyre rearRight;
-	@Autowired
-	@Qualifier(value="fourCyl")
+//	@Autowired
+//	@Qualifier(value="fourCyl")
+	@Resource(name="sixCyl")
 	private Engine engineType;
 	
 	public String getCarDescription() {
@@ -42,6 +47,12 @@ public class FamilyCar {
 			response += "Rear Right tyre: " + rearRight.getTireDiameter() + "\n";
 		} else {
 			response += "Rear Right tyre: not set \n";
+		}
+		response += "Engine type: ";
+		if (engineType != null) {
+			response += engineType.drive() + "\n";
+		} else {
+			response += "not set \n";
 		}
 		return response;
 	}

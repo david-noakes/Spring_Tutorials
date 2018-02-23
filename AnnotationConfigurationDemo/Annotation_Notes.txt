@@ -1,0 +1,10 @@
+Spring provides 
+-> xml configuration
+-> annotation con figuration
+-> java configuration
+
+Java provides alternative annotations:
+
+Native:   @Autowired
+JSR-250:  @Resource
+JSR-330:  @Inject

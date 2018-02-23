@@ -18,8 +18,11 @@ public class AnnotationConfigurationDemoApplication {
 		Meal mealByAnnotation = appContext.getBean("mealByAnnotation", Meal.class);
 		System.out.println("mealByAnnotation: " + mealByAnnotation.whatsInThisMeal());
 		
-//		Fruit anotherFruit = appContext.getBean("anotherFruit", Fruit.class);
-//		System.out.println("another fruit: " + anotherFruit.talkABoutYourself());
+		Fruit anotherFruit = appContext.getBean("anotherFruit", Fruit.class);
+		System.out.println("another fruit: " + anotherFruit.talkABoutYourself());
+
+		Fruit altFruit = appContext.getBean("altFruit", Fruit.class);
+		System.out.println("alt fruit: " + altFruit.talkABoutYourself());
 
 		((ClassPathXmlApplicationContext) appContext).close();
 		

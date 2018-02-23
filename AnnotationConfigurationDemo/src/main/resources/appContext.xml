@@ -19,6 +19,9 @@
     <bean id="grain" class="org.shadowlands.food.Grain" />
     
     <bean id="anotherFruit"  class="org.shadowlands.food.Fruit"></bean>
+    <bean id="altFruit"  class="org.shadowlands.food.Fruit">
+    <property name="description" value="This is alt fruit, set via property on the bean definition"/>
+    </bean>
     
     <bean id="mealByAnnotation" class="org.shadowlands.food.Meal" />
     

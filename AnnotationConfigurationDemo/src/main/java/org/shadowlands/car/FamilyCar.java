@@ -4,10 +4,13 @@ import javax.annotation.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import javax.annotation.*;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+@Component("electricCar")
 public class FamilyCar {
 	// note - Autowire here is ambiguous smallTyre and bigTyre
 	//@Autowired
@@ -30,7 +33,8 @@ public class FamilyCar {
 	private Tyre rearRight;
 //	@Autowired
 //	@Qualifier(value="fourCyl")
-	@Resource(name="sixCyl")
+//	@Resource(name="sixCyl")
+	@Resource(name="electric")
 	private Engine engineType;
 	
 	public String getCarDescription() {

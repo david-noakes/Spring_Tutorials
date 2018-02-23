@@ -1,5 +1,8 @@
 package org.shadowlands.car;
 
+import javax.inject.Named;
+
+@Named("fourCyl")
 public class FourCylinderEngine implements Engine {
 
 	//@Override

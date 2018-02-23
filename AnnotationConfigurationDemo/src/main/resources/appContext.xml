@@ -8,7 +8,9 @@
 	<!-- <context:property-placeholder location="classpath:application.properties"/>  -->
 	<!-- v002 annotate fruit -->	
 	<!-- v003 remove fruit bean -->
+	<!-- v004 component scan -->
 	<context:annotation-config />
+	<context:component-scan base-package="org.shadowlands.car"></context:component-scan>
 	
     <bean id="fruit" class="org.shadowlands.food.Fruit">
         <property name="description" value="a fruit, with the description set from the appContext"></property>
@@ -33,6 +35,8 @@
     </bean>
     <bean id="sixCyl" class="org.shadowlands.car.SixCylinderEngine"></bean>
     <bean id="fourCyl" class="org.shadowlands.car.FourCylinderEngine"></bean>
+<!--     <bean id="diesel" class="org.shadowlands.car.DieselEngine3"></bean> -->
+<!--     <bean id="electric" class="org.shadowlands.car.ElectricEngine"></bean> -->
     
     <bean id="familyCar" class="org.shadowlands.car.FamilyCar">
         <property name="frontLeft" ref="smallTyre"/>
@@ -43,5 +47,8 @@
     </bean>
     
     <bean id="altFamilyCar" class="org.shadowlands.car.FamilyCar"/>
+<!--     <bean id="electricCar" class="org.shadowlands.car.FamilyCar"> -->
+<!--         <property name="engineType" ref="electric"/> -->
+<!--     </bean> -->
 
 </beans>

@@ -8,3 +8,20 @@ Java provides alternative annotations:
 Native:   @Autowired
 JSR-250:  @Resource
 JSR-330:  @Inject   (requires changes to POM to include javax.inject v1
+
+Spring Stereotype Annotations
+   Markers for classes that fulfil a specific role within an application
+   @Component, @Service, @Repository, @Controller
+   
+   @Component
+       Generic way to represent any spring managed component
+       
+   @Repository
+       Stereotype for persistence layer of application  (data access objects)    
+       
+   @Service
+       Stereotype for service layer of application (business logic)   
+      
+   @Controller
+       Stereotype for presentation layer of application (Spring MVC apps)
+          Model View (Controller **)    

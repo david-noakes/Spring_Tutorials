@@ -4,15 +4,22 @@ import javax.annotation.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import javax.annotation.*;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 public class FamilyCar {
 	// note - Autowire here is ambiguous smallTyre and bigTyre
 	//@Autowired
-	@Resource(name="smallTyre")
+	//@Resource(name="smallTyre")
 	//@Qualifier(value="sTyre")
+	@Inject
+	@Named("bigTyre")
 	private Tyre frontLeft;
-	@Autowired
-	@Qualifier(value="sTyre")
+//	@Autowired
+//	@Qualifier(value="sTyre")
+	@Inject
+	@Named("bigTyre")
 	private Tyre frontRight;
 //	@Autowired
 //	@Qualifier(value="bigTyre")

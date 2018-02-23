@@ -7,4 +7,4 @@ Java provides alternative annotations:
 
 Native:   @Autowired
 JSR-250:  @Resource
-JSR-330:  @Inject
+JSR-330:  @Inject   (requires changes to POM to include javax.inject v1

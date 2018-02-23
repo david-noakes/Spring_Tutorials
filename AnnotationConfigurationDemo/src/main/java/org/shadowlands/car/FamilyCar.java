@@ -1,18 +1,24 @@
 package org.shadowlands.car;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class FamilyCar {
 	// note - Autowire here is ambiguous smallTyre and bigTyre
-	//@Autowired 
+	@Autowired 
+	@Qualifier(value="sTyre")
 	private Tyre frontLeft;
-	//@Autowired
+	@Autowired
+	@Qualifier(value="sTyre")
 	private Tyre frontRight;
-	//@Autowired
+	@Autowired
+	@Qualifier(value="bTyre")
 	private Tyre rearLeft;
-	//@Autowired
+	@Autowired
+	@Qualifier(value="bTyre")
 	private Tyre rearRight;
-	//@Autowired
+	@Autowired
+	@Qualifier(value="fourCyl")
 	private Engine engineType;
 	
 	public String getCarDescription() {

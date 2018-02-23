@@ -22,8 +22,12 @@
     
     <bean id="mealByAnnotation" class="org.shadowlands.food.Meal" />
     
-    <bean id="smallTyre" class="org.shadowlands.car.SmallTyre"></bean>
-    <bean id="bigTyre" class="org.shadowlands.car.BigTyre"></bean>
+    <bean id="smallTyre" class="org.shadowlands.car.SmallTyre">
+     <qualifier value="sTyre"/>
+    </bean>
+    <bean id="bigTyre" class="org.shadowlands.car.BigTyre">
+         <qualifier value="bTyre"/>
+    </bean>
     <bean id="sixCyl" class="org.shadowlands.car.SixCylinderEngine"></bean>
     <bean id="fourCyl" class="org.shadowlands.car.FourCylinderEngine"></bean>
     

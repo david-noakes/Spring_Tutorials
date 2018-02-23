@@ -4,6 +4,7 @@ import org.shadowlands.car.DieselEngine3;
 import org.shadowlands.car.ElectricEngine;
 import org.shadowlands.car.FamilyCar;
 import org.shadowlands.car.FourCylinderEngine;
+import org.shadowlands.car.TinyTyre;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -27,6 +28,9 @@ public class ComponentScanningApp {
 		
 		FamilyCar myElectricCar = appContext.getBean("electricCar", FamilyCar.class);
 		System.out.println("Electric car:" + myElectricCar.getCarDescription());
+		
+		TinyTyre myTinyTyre = appContext.getBean("tinyTyre", TinyTyre.class);
+		System.out.println("Tiny Tyre:" + myTinyTyre.diameter());
 		
 		((ClassPathXmlApplicationContext) appContext).close();
 

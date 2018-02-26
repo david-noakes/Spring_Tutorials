@@ -1,5 +1,7 @@
 package org.shadowlands.demo.car;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class FamilyCar {
  
@@ -7,6 +9,10 @@ public class FamilyCar {
 	private Tyre frontRight;
 	private Tyre rearLeft;
 	private Tyre rearRight;
+	
+	// here it overrides the specific uses of fourCyl in appConfig
+	@Autowired
+	@Qualifier("sixCyl")
 	private Engine engineType;
 	
 	public String getCarDescription() {
@@ -81,6 +87,9 @@ public class FamilyCar {
 	public Engine getEngineType() {
 		return engineType;
 	}
+	// here it overrides the specific uses of fourCyl in appConfig
+//	@Autowired
+//	@Qualifier("sixCyl")
 	public void setEngineType(Engine engineType) {
 		this.engineType = engineType;
 	}

@@ -23,11 +23,14 @@ public class JavaConfigDemoApp01 {
 		SixCylinderEngine mySix = appContext.getBean("sixCyl", SixCylinderEngine.class);
 		System.out.println("mySix:" + mySix.getNumberOfCylinders());
 		
-		FamilyCar mySedan = appContext.getBean("familyCar", FamilyCar.class);
+		FamilyCar mySedan = appContext.getBean("sedanCar", FamilyCar.class);
 		System.out.println(("my sedan = " + mySedan.getCarDescription()));
 
 		FamilyCar mySmallCar = appContext.getBean("smallCar", FamilyCar.class);
 		System.out.println(("my small car = " + mySmallCar.getCarDescription()));
+
+		FamilyCar myFamilyCar = appContext.getBean("familyCar", FamilyCar.class);
+		System.out.println(("my family car = " + myFamilyCar.getCarDescription()));
 
 		((AnnotationConfigApplicationContext) appContext).close();
 //		((ClassPathXmlApplicationContext) appContext).close();

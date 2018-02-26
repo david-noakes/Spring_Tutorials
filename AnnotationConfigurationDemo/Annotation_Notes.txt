@@ -32,3 +32,17 @@ Java based configuration:
 	Annotations:
 	@Configuration
 	@Bean
+	@Component
+	
+Spring Expression Language (SPEL):
+	used for querying the spring object graph at runtime
+	Built to work with spring framework
+	Can be used independently of Spring Framework	
+	Functionality:
+		work with Literal expressions
+		work with regular expressions
+		work with mathmatical operators, boolean operators, relational operators
+		Invoking methods
+		Access and set properties
+		work with bean references
+		Can be used in both XML and annotation configurations

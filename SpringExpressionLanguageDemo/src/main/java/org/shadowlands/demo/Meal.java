@@ -10,9 +10,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Meal {
 
-	@Value("#{myDemoFruit}")
+	@Value("#{fruit}")
 	private Fruit fruit;
-	@Value("#{myDemoFruit.name}")
+	@Value("#{fruit.name}")
 	private String fruitName;
 	
 	

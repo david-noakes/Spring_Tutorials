@@ -37,8 +37,9 @@ public class Fruit {
 
 
 	@Autowired
-//	public void setName(@Value("#{T(org.shadowlands.demo.DataSource).getAppleType() + ' Apple'}") String name) {
-	public void setName(@Value("#{T(org.shadowlands.demo.DataSource).getAppleTypeStatic() + ' Apple'}") String name) {
+	// the ? operator will return null as a string if the argument is null  However, the parser needs .method() after
+	public void setName(@Value("#{demoDataSource.getAppleType()?.toString() + ' Apple'}") String name) {
+//	public void setName(@Value("#{T(org.shadowlands.demo.DataSource).getAppleTypeStatic() + ' Apple'}") String name) {
 		Name = name;
 	}
 
@@ -50,8 +51,8 @@ public class Fruit {
 	@Autowired
 	//By the time the setter is called, demoDataSource has been instantiated
 //	public void setNutritionalRating(@Value("#{T(java.lang.Math).random() * 10 + demoDataSource.getAppleType().length()}") int nutritionalRating) {
-	public void setNutritionalRating(@Value("#{0 + demoDataSource.getAppleType().length()}") int nutritionalRating) {
-//	public void setNutritionalRating(@Value("#{T(java.lang.Math).random() + demoDataSource.getAppleType().length()}") int nutritionalRating) {
+//	public void setNutritionalRating(@Value("#{0 + demoDataSource.getAppleType().length()}") int nutritionalRating) {
+	public void setNutritionalRating(@Value("#{T(java.lang.Math).random() + demoDataSource.getAppleType().length()}") int nutritionalRating) {
 //	public void setNutritionalRating(@Value("#{T(java.lang.Math).random()}") int nutritionalRating) {
 		this.nutritionalRating = nutritionalRating;
 		

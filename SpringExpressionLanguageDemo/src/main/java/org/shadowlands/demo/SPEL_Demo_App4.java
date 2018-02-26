@@ -8,23 +8,19 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
-public class SPEL_Demo_App3 {
+public class SPEL_Demo_App4 {
+	
+	@Autowired
+	@Value("#{systemProperties['os.name']}")
+	private static String osValue;
 
 	public static void main(String[] args) {
 		//SpringApplication.run(SpringExpressionLanguageDemoApplication.class, args);
-		ApplicationContext appContext = new ClassPathXmlApplicationContext("appContext3.xml");
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("appContext4.xml");
 
-//		Fruit x = new Fruit();
-//		System.out.println("x: " + x.talkAboutYourself());
-		
-		Fruit myFruit = appContext.getBean("fruit", Fruit.class);
-		System.out.println("myFruit: " + myFruit.talkAboutYourself());
-		
-//		Fruit myDemoFruit = appContext.getBean("myDemoFruit", Fruit.class);
-//		System.out.println("myDemoFruit: " + myDemoFruit.talkAboutYourself());
-		
-		Meal myFirstMeal = appContext.getBean("meal", Meal.class);
-		System.out.println("myFirstMeal: " + myFirstMeal.whatsInThisMeal());
+		System.out.println("osValue: " + osValue);
+		ScriptLoaderDemoClass sl = appContext.getBean("sL", ScriptLoaderDemoClass.class);
+		sl.loadScript();
 		
 		((ClassPathXmlApplicationContext) appContext).close();
 		

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- <context:property-placeholder location="classpath:application.properties"/>  -->
+	<!-- v001 annotation included -->
+	<!-- v002 component scan only -->	
+<!-- 	<context:annotation-config /> -->
+        <context:component-scan base-package="org.shadowlands.demo"></context:component-scan>
+	
+		<bean id="winScript" class="org.shadowlands.demo.WinScript"/>
+		<bean id="unixScript" class="org.shadowlands.demo.UnixScript"/>
+		<bean id="sL" class="org.shadowlands.demo.ScriptLoaderDemoClass">
+			<property name="script" value="#{systemProperties['os.name'] matches 'Unix' ? unixScript : winScript}"></property>
+		</bean>
+
+
+</beans>

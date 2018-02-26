@@ -3,6 +3,9 @@ package org.shadowlands.demo;
 import java.util.ArrayList;
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
+@Component("demoDataSource")
 public class DataSource {
 	public String appleDescription = "Hi, I'm an apple description";
 	private static ArrayList<String> Apple_Types = new ArrayList<String>() {{

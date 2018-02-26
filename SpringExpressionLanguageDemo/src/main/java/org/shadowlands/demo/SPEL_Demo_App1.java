@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
-public class SEL_Demo_App1 {
+public class SPEL_Demo_App1 {
 
 	public static void main(String[] args) {
 		//SpringApplication.run(SpringExpressionLanguageDemoApplication.class, args);

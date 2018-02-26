@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- <context:property-placeholder location="classpath:application.properties"/>  -->
+	<!-- v001 annotation included -->
+	<!-- v002 component scan only -->	
+<!-- 	<context:annotation-config /> -->
+        <context:component-scan base-package="org.shadowlands.demo"></context:component-scan>
+	
+
+<!-- 	<bean id="fruit" class="org.shadowlands.demo.Fruit"> -->
+<!-- 		<property name="name" value="Granny Smith Apple"/> -->
+<!-- 		<property name="name" value="#{'Granny Smith' + ' Apple'}"/> -->
+<!--       the getter needs to be a static method because Spring does not intantiate the class -->
+<!-- 		<property name="name" value="#{T(org.shadowlands.demo.DataSource).getAppleTypeStatic() + ' Apple'}"/> -->
+<!-- 		<property name="nutritionalRating" value="#{T(java.lang.Math).random() * 10}" /> -->
+<!-- 	</bean> -->
+	
+<!-- 	<bean id="demoDataSource" class="org.shadowlands.demo.DataSource"></bean> -->
+
+</beans>

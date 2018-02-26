@@ -1,5 +1,6 @@
 package org.shadowlands.demo;
 
+import org.shadowlands.demo.car.FamilyCar;
 import org.shadowlands.demo.car.FourCylinderEngine;
 import org.shadowlands.demo.car.SixCylinderEngine;
 import org.shadowlands.demo.config.AppConfig;
@@ -21,6 +22,9 @@ public class JavaConfigDemoApp01 {
 
 		SixCylinderEngine mySix = appContext.getBean("sixCyl", SixCylinderEngine.class);
 		System.out.println("mySix:" + mySix.getNumberOfCylinders());
+		
+		FamilyCar mySedan = appContext.getBean("familyCar", FamilyCar.class);
+		System.out.println(("my sedan = " + mySedan.getCarDescription()));
 
 		((AnnotationConfigApplicationContext) appContext).close();
 //		((ClassPathXmlApplicationContext) appContext).close();

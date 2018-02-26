@@ -10,7 +10,11 @@
 	<context:annotation-config />
 <!-- 	<context:component-scan base-package="org.shadowlands.car"></context:component-scan> -->
 	
-    <bean id="sixCyl" class="org.shadowlands.demo.car.SixCylinderEngine"></bean>
-    <bean id="fourCyl" class="org.shadowlands.demo.car.FourCylinderEngine"></bean>
+<!--     <bean id="sixCyl" class="org.shadowlands.demo.car.SixCylinderEngine"></bean> -->
+<!--     <bean id="fourCyl" class="org.shadowlands.demo.car.FourCylinderEngine"></bean> -->
+    
+<!--     <bean id="familyCar" class="org.shadowlands.demo.car.FamilyCar"> -->
+<!--   	  <property name="engineType" ref="fourCyl"/> -->
+<!--     </bean> -->
 
 </beans>

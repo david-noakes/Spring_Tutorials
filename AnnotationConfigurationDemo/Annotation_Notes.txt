@@ -25,3 +25,10 @@ Spring Stereotype Annotations
    @Controller
        Stereotype for presentation layer of application (Spring MVC apps)
           Model View (Controller **)    
+          
+Java based configuration:         
+	Introduced in spring 3.0
+	No appContext.xml - replaced by Java class files 
+	Annotations:
+	@Configuration
+	@Bean

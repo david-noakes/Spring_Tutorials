@@ -26,6 +26,9 @@ public class JavaConfigDemoApp01 {
 		FamilyCar mySedan = appContext.getBean("familyCar", FamilyCar.class);
 		System.out.println(("my sedan = " + mySedan.getCarDescription()));
 
+		FamilyCar mySmallCar = appContext.getBean("smallCar", FamilyCar.class);
+		System.out.println(("my small car = " + mySmallCar.getCarDescription()));
+
 		((AnnotationConfigApplicationContext) appContext).close();
 //		((ClassPathXmlApplicationContext) appContext).close();
 

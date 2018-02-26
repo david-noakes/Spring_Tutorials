@@ -40,7 +40,19 @@ public class FamilyCar {
 		return response;
 	}
 	
+	// constructors
+	public FamilyCar() {} // default no args is now required explicitly
 	
+	
+	public FamilyCar(Tyre frontLeft, Tyre frontRight, Tyre rearLeft, Tyre rearRight, Engine engineType) {
+		super();
+		this.frontLeft = frontLeft;
+		this.frontRight = frontRight;
+		this.rearLeft = rearLeft;
+		this.rearRight = rearRight;
+		this.engineType = engineType;
+	}
+
 	// getters and setters
 	public Tyre getFrontLeft() {
 		return frontLeft;

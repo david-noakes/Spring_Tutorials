@@ -11,6 +11,12 @@
 <!-- 	<context:annotation-config /> -->
         <context:component-scan base-package="org.shadowlands.demo"></context:component-scan>
 	
+		<bean id="myDemoFruit" class="org.shadowlands.demo.Fruit">
+		    <property name="name" value="Strawberry"/>
+		    <property name="nutritionalRating" value="12" />
+		</bean>
+
+
 <!-- 	<bean id="fruit" class="org.shadowlands.demo.Fruit"> -->
 <!-- 		<property name="name" value="Granny Smith Apple"/> -->
 <!-- 		<property name="name" value="#{'Granny Smith' + ' Apple'}"/> -->

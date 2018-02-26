@@ -10,7 +10,11 @@
 	<context:annotation-config />
 
 	<bean id="fruit" class="org.shadowlands.demo.Fruit">
-		<property name="name" value="Granny Smith Apple"/>
+<!-- 		<property name="name" value="Granny Smith Apple"/> -->
+<!-- 		<property name="name" value="#{'Granny Smith' + ' Apple'}"/> -->
+<!--       the getter needs to be a static method because Spring does not intantiate the class -->
+		<property name="name" value="#{T(org.shadowlands.demo.DataSource).getAppleTypeStatic() + ' Apple'}"/>
+		<property name="nutritionalRating" value="#{T(java.lang.Math).random() * 10}" />
 	</bean>
 	
 	<bean id="demoDataSource" class="org.shadowlands.demo.DataSource"></bean>

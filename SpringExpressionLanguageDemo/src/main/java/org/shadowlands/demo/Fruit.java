@@ -10,7 +10,7 @@ public class Fruit {
 	// methods
 	public String talkAboutYourself() {
 		// Format handles nulls
-		return String.format("I'm a fruit named: %s, my nutritional rating is %n", Name, nutritionalRating);
+		return String.format("I'm a fruit named: %s, my nutritional rating is %d", Name, nutritionalRating);
 	}
 	
 	// constructors

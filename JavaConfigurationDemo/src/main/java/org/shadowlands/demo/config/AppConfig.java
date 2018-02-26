@@ -2,12 +2,15 @@ package org.shadowlands.demo.config;
 
 import static org.mockito.Mockito.never;
 
+import javax.annotation.Resource;
+
 import org.shadowlands.demo.car.BigTyre;
 import org.shadowlands.demo.car.FamilyCar;
 import org.shadowlands.demo.car.FourCylinderEngine;
 import org.shadowlands.demo.car.SixCylinderEngine;
 import org.shadowlands.demo.car.SmallTyre;
 import org.shadowlands.demo.car.Tyre;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +25,7 @@ public class AppConfig {
 		return new FourCylinderEngine();
 	}
 	
-	@Bean(name="sixCyl")
+//	@Bean(name="sixCyl")
 	public SixCylinderEngine getSixCyl() {
 		return new SixCylinderEngine();
 	}
@@ -47,7 +50,7 @@ public class AppConfig {
 	//autowiring - no properties specified
 	@Bean(name="familyCar")
 	public FamilyCar getFamilyCar() {
-		FamilyCar fc = new FamilyCar();
+		FamilyCar fc = new FamilyCar(getBigTyre(), getBigTyre(), getBigTyre(), getBigTyre(), getSixCyl());
 		
 		return fc;
 	}

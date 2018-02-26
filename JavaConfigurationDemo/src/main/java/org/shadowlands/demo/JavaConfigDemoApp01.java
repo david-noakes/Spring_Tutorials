@@ -21,6 +21,7 @@ public class JavaConfigDemoApp01 {
 		System.out.println("myFour:" + myFour.getNumberOfCylinders());
 
 		SixCylinderEngine mySix = appContext.getBean("sixCyl", SixCylinderEngine.class);
+//		SixCylinderEngine mySix = appContext.getBean(SixCylinderEngine.class);
 		System.out.println("mySix:" + mySix.getNumberOfCylinders());
 		
 		FamilyCar mySedan = appContext.getBean("sedanCar", FamilyCar.class);

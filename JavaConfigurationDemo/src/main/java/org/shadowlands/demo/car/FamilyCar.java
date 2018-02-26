@@ -11,8 +11,8 @@ public class FamilyCar {
 	private Tyre rearRight;
 	
 	// here it overrides the specific uses of fourCyl in appConfig
-	@Autowired
-	@Qualifier("sixCyl")
+//	@Autowired
+//	@Qualifier("sixCyl")
 	private Engine engineType;
 	
 	public String getCarDescription() {
